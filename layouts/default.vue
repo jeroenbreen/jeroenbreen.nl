@@ -2,13 +2,9 @@
     <div class="App">
         <Header />
 
-        <div class="wrapper bg-sand">
-            <div class="content">
-                <main>
-                    <slot />
-                </main>
-            </div>
-        </div>
+        <main class="wrapper bg-sand">
+            <slot />
+        </main>
     </div>
 </template>
 
@@ -23,18 +19,8 @@
     font-family: 'Dosis', sans-serif;
 }
 .wrapper {
-    height: 100%;
-    overflow: scroll;
-
-    .content {
-        width: 1200px;
-        max-width: 100%;
-        padding: 90px 24px;
-        margin: 0 auto;
-    }
-
-    main {
-        margin-bottom: 80px;
-    }
+    height: calc(100% - 54px);
+    overflow: auto;
+    padding: 60px 80px 0 80px;
 }
 </style>

@@ -106,68 +106,47 @@ onMounted(() => {
 </script>
 
 <template>
-    <section>
-    <div class="Slogan">
-        <b>jeroenbreen </b>
+    <section class="text-5xl text-center mb-12">
+        <div class="mb-4">
+            <b>jeroenbreen </b>
 
-        <span class="Slogan__chunk Slogan__chunk-1 Slogan__code">
-            {{ values[0] }}
-        </span>
+            <span class="font-sans font-light">
+                {{ values[0] }}
+            </span>
 
-        <span class="Slogan__chunk Slogan__chunk-2 Slogan__chunk--code">
-            {{ values[1] }}
-        </span>
+            <span>
+                {{ values[1] }}
+            </span>
 
-        <span class="Slogan__chunk Slogan__chunk-3 Slogan__code ">
-            {{ values[2] }}
-        </span>
+            <span class="font-sans font-light">
+                {{ values[2] }}
+            </span>
 
-        <span class="Slogan__chunk Slogan__chunk-4 Slogan__chunk--thatLoves">
-            {{ values[3] }}
-        </span>
+            <span>
+                {{ values[3] }}
+            </span>
 
-        <span class="Slogan__chunk Slogan__chunk-5 Slogan__code">
-            {{ values[4] }}
-        </span>
+            <span class="font-sans font-light">
+                {{ values[4] }}
+            </span>
 
-        <span class="Slogan__chunk Slogan__chunk-6 Slogan__chunk--design">
-            {{ values[5] }}
-        </span>
+            <span>
+                {{ values[5] }}
+            </span>
 
-        <span class="Slogan__chunk Slogan__chunk-7 Slogan__code">
-            {{ values[6] }}
-        </span>
-    </div>
-
-    <div class="font-mono text-3xl flex flex-wrap gap-1 justify-center items-center">
-        <span>[</span>
-
-        <div v-for="(tag, index) in tags" :key="index" class="Tags__item bg-yellow text-white px-2">
-            {{tag}}
+            <span class="font-sans font-light">
+                {{ values[6] }}
+            </span>
         </div>
 
-        <span>]</span>
-    </div>
+        <div class="font-sans text-3xl flex flex-wrap gap-1 justify-center items-center">
+            <span>[</span>
+
+            <div v-for="(tag, index) in tags" :key="index" class="Tags__item bg-yellow text-white px-2">
+                {{tag}}
+            </div>
+
+            <span>]</span>
+        </div>
     </section>
 </template>
-
-
-<style lang="scss" scoped>
-section {
-    //height: 400px;
-    font-size: 48px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.Slogan {
-    line-height: 1;
-    font-weight: 400;
-    margin-bottom: 10px;
-
-    &__code {
-        font-family: 'Roboto condensed', sans-serif;
-        font-weight: 300;
-    }
-}
-</style>

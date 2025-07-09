@@ -43,7 +43,7 @@
         margin: 0 0 3px 0;
         color: #000;
         text-align: left;
-
+        font-weight: 700;
     }
 
     h4 {

@@ -1,17 +1,28 @@
 <template>
-    <div class="Intro">
-        <slot />
+    <div class="wrapper">
+        <div class="content">
+            <slot />
+        </div>
     </div>
 </template>
 
 
 <style lang="scss" scoped>
-.Intro {
-    font-size: 22px;
-    width: 800px;
-    max-width: 100%;
-    margin: 0 auto 60px auto;
-    line-height: 1.8;
-    font-weight: 700;
+.wrapper {
+    container-type: inline-size;
+}
+.content {
+    display: grid;
+    grid-template-columns: minmax(200px, 400px) 1fr;
+    gap: 100px;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+@container (width < 800px) {
+    .content {
+        display: block;
+    }
 }
 </style>

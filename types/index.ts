@@ -9,7 +9,7 @@ export type Project = {
     headImage: string;
     // key: string;
     // intro: string;
-    // link: string;
+    link?: string;
     // body: string;
     // description: string;
     // artwork: Artwork;

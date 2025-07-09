@@ -8,7 +8,11 @@ useHead({
 
 <template>
     <Intro>
-        <Slogan />
+        <div>
+            <Slogan />
+            <Stack />
+        </div>
+
         <ProjectCloud />
     </Intro>
 </template>
