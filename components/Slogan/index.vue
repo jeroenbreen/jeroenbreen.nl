@@ -1,5 +1,6 @@
 <script setup lang="ts">
 
+const withTags = false;
 
 const chunks = [
     '{{', 'code', '}} ', 'that loves ', '((', 'design', '))'
@@ -41,7 +42,11 @@ const start = () => {
             addChar(i);
             i++
             if (i >= n) {
-                createTags(i - n);
+                if (withTags) {
+                    createTags(i - n);
+                } else {
+                    reset();
+                }
             }
         }, t)
 
@@ -139,7 +144,7 @@ onMounted(() => {
             </span>
         </div>
 
-        <div class="font-sans text-3xl flex flex-wrap gap-1 justify-center items-center">
+        <div v-if="withTags" class="font-sans text-3xl flex flex-wrap gap-1 justify-center items-center">
             <span>[</span>
 
             <div v-for="(tag, index) in tags" :key="index" class="Tags__item bg-yellow text-white px-2">

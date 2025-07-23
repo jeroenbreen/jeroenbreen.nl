@@ -5,8 +5,8 @@
 <template>
     <div class="LogoJeroenBreen">
         <div class="LogoJeroenBreen__icon">
-            <div class="yellow-square"/>
-            <div class="red-circle"/>
+            <div class="yellow-square bg-yellow"/>
+            <div class="red-circle bg-red"/>
         </div>
         <div class="LogoJeroenBreen__text">
             <h3>jeroenbreen</h3>
@@ -59,7 +59,6 @@
     height: 30px;
     vertical-align: top;
     margin: 1px 6px 4px 14px;
-    background: #FFD400;
     display: inline-block;
 }
 
@@ -67,7 +66,6 @@
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: #DE7070;
     display: inline-block;
 }
 </style>
