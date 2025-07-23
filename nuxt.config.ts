@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     modules: ['@nuxt/eslint', '@nuxt/image'],
     app: {
         head: {
-            title: 'Innouveau',
+            title: 'Jeroen Breen - Project base freelance frontend developer',
             htmlAttrs: {
                 lang: 'nl',
             },

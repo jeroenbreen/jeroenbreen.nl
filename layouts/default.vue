@@ -21,6 +21,5 @@
 .wrapper {
     height: calc(100% - 54px);
     overflow: auto;
-    padding: 60px 80px 0 80px;
 }
 </style>

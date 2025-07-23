@@ -2,18 +2,11 @@
 import type {Project} from "~/types";
 
 defineProps<{project: Project, spawned: boolean}>()
-const width = Math.round(250 * Math.random() + 100)
-
-const mounted = ref(false)
-
-onMounted(() => {
-    mounted.value = true
-})
 </script>
 
 <template>
-    <div v-if="mounted" :style="{'width': width + 'px'}" >
-        <div :data-spawned="spawned" class="bg-white shadow-md">
+    <div >
+        <div class="bg-white shadow-md">
             <div class="px-4 py-2 border-b-1 border-gray-300 font-serif text-xl">
                 {{ project.title }}
             </div>
@@ -37,18 +30,5 @@ onMounted(() => {
 
 
 <style lang="scss" scoped>
-[data-spawned] {
-    transition: all 1.5s ease;
-    transform-origin: center;
-}
 
-[data-spawned="false"] {
-    opacity: 0;
-    transform: scale(0);
-}
-
-[data-spawned="true"] {
-    opacity: 1;
-    transform: scale(1);
-}
 </style>
