@@ -111,7 +111,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <section class="text-5xl text-center mb-12">
+    <section class="text-5xl text-center mb-12 min-h-[102px]">
         <div class="mb-4">
             <b>jeroenbreen </b>
 
