@@ -12,7 +12,7 @@ defineProps<{project: Project}>()
             </div>
 
             <div >
-                <img :src="project.headImage" class="w-full" />
+                <img :src="project.headImage" class="w-full" :alt="project.title" />
             </div>
 
             <div class="p-2 flex flex-wrap gap-1.5">
