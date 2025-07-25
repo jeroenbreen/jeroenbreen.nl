@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type {Project} from "~/types";
 
-defineProps<{project: Project, spawned: boolean}>()
+defineProps<{project: Project}>()
 </script>
 
 <template>

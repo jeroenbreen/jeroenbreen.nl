@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import {projects} from '~/data/projects'
 import type {Project} from '~/types'
 
+const props = defineProps<{projects: Project[], top: number}>()
 const el = ref<HTMLElement | null>(null)
 const n = 3;
 
@@ -15,8 +15,8 @@ const getSets = () => {
             // top: 0,
         }
     });
-    for (let i = 0; i < projects.length; i++) {
-        s[i % n].projects.push(projects[i]);
+    for (let i = 0; i < props.projects.length; i++) {
+        s[i % n].projects.push(props.projects[i]);
     }
     return s;
 }
@@ -32,8 +32,7 @@ const updateAfterWheel = (event: WheelEvent) => {
     }
 };
 
-
-const init = (element: HTMLElement) => {
+const measure = (element: HTMLElement) => {
     const children = element.children;
     let count = 0
     const pxInView = element.clientHeight;
@@ -42,8 +41,8 @@ const init = (element: HTMLElement) => {
         sets.value[count].size = wrapper ? Math.round(wrapper.clientHeight) - pxInView : 0;
         count++;
     }
-    element.addEventListener("wheel", updateAfterWheel);
 }
+
 
 const getTop = (index: number) => {
     if (sets.value.length <= index) {
@@ -53,18 +52,23 @@ const getTop = (index: number) => {
 }
 
 onMounted(() => {
-    setTimeout(() => {
-        if (el.value) {
-            init(el.value)
-        }
-    }, 1000);
+    if (el.value) {
+        el.value.addEventListener("wheel", updateAfterWheel);
+        setTimeout(() => {
+            measure(el.value)
+        }, 1000);
+        setTimeout(() => {
+            measure(el.value)
+        }, 5000);
+    }
+
 });
 </script>
 
 <template>
-    <div ref="el" class="h-full grid gap-4 grid-cols-[minmax(350px,1.4fr)_minmax(100px,1.1fr)_minmax(50px,0.8fr)]">
+    <div ref="el" class="h-full grid gap-4 grid-cols-[minmax(120px,2fr)_minmax(120px,1fr)_minmax(120px,0.5fr)]">
         <div v-for="(set, index) in sets" :key="index" class="relative h-full overflow-hidden">
-            <ProjectRail :projects="set.projects" :top="getTop(index)"/>
+            <ProjectRail :projects="set.projects" :top="getTop(index)" abs />
         </div>
     </div>
 </template>

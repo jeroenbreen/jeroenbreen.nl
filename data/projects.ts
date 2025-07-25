@@ -40,20 +40,21 @@ export const projects: Project[] = [
         tags: ['application', 'infographic']
     },
     {
-        title: 'Pilatus Aircraft',
-        headImage: '/images/pilatus.gif',
-        tags: ['application', '3d configurator'],
-        link: 'https://www.pilatus-aircraft.com/en/configurator/pc-24'
+        title: 'Loodsboot',
+        headImage: '/images/loodsboot.png',
+        tags: [],
     },
     {
         title: 'F-Domes',
         headImage: '/images/fdomes.gif',
         tags: ['application', '3d configurator'],
         link: 'https://3d.fdomes.com'
-    },{
-        title: 'Loodsboot',
-        headImage: '/images/loodsboot.png',
-        tags: [],
+    },
+    {
+        title: 'Pilatus Aircraft',
+        headImage: '/images/pilatus.gif',
+        tags: ['application', '3d configurator'],
+        link: 'https://www.pilatus-aircraft.com/en/configurator/pc-24'
     },
     {
         title: 'Techart',
