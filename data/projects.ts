@@ -57,8 +57,8 @@ export const projects: Project[] = [
         link: 'https://www.pilatus-aircraft.com/en/configurator/pc-24'
     },
     {
-        title: 'Techart',
-        headImage: '/images/techart.gif',
+        title: 'Tech Print Industries',
+        headImage: '/images/techprintindustries.gif',
         tags: ['application', '3d configurator'],
     },
     {
